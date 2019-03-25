@@ -1,0 +1,2933 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.dmi.unict.it/ontologies/OntoCeramic.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.dmi.unict.it/ontologies/OntoCeramic.owl"
+     versionIRI="http://www.dmi.unict.it/ontologies/OntoCeramic-0.4.0">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.dmi.unict.it/ontologies/OntoLoc.owl</Import>
+    <Import>http://purl.org/NET/cidoc-crm/core</Import>
+    <Import>http://purl.org/ontology/bibo/</Import>
+    <Import>http://purl.org/NET/dc_owl2dl/terms</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">version 0.2: Provincia is now subClass of Comune. Removed the rule Provincia(x)-&gt;Comune(x)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.5 some irreflexive property added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8.2 rules added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8.6 CIDOC-CRM Core integration started</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8.3: Placed added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">versione 0.2.7 subPropertyOf Fragment and their inverse property added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.2 minor corrections</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8 support for Lamp added, Shape magement changed to taxonomy, fitting for fragment added.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/licenses/by-sa/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0.2.8.5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8.5 minor corrections</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.4 field Type support added (hasShapeType), hasSheet and hasBox data properties added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.6 some disjoint class expression added, all members of Sector are now disjointed</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">version 0.1 : subOntoLocal and OntoCeramic Merged</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">version 0.2.1 : english and italian labels added for classes, individuals and properties </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.3 disjointness for Type_of_fragment added</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version 0.2.8.1 subclasses of Shape added</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#A_Stampo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anfora"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anfore_Trasporto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anforetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ansa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ariballos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bacino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Becco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bicchiere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bottiglia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brocca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Campana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Catino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ceramica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ceramica_Comune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ceramica_Da_Fuoco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ceramica_Decorazione_Figurata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ceramica_Fine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ciotola"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coperchio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coppa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coppetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coppo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cratere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dolia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dolium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiasco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fondo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrammentoDiagnostico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hayes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Idria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Italiota"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kantharos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kylix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lamboglia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Laterizi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lekanides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lopadion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lucerna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lucerne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mattone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mortaio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oggetto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oinochoe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Olla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orlo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Piede"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pithos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rithon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Saggio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scodella"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Serbatoio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Settore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sigillata_Africana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sigillata_Italica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sigillata_Orientale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skyphos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Specchio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statuetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tazza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tegola"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TipoDiFrammento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type1A"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type8"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unguentario"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eComponibileCon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoDisco"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoFondo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haClasse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haForma"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoDisco"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoFondo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haSaggio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haSettore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataScavo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haAltezza"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haCassetta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haColore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haDescrittoreForma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haDescrizioneGenerale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haDiametro"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haLarghezza"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haLunghezza"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haMisura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haNome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haPrimoDescrittoreForma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haScheda"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haSecondoDescrittoreForma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haSpessore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haSpessoreFondo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haSpessoreParete"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haTerzoDescrittoreForma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasChroma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroCivico"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Attica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Comune"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Da_Fuoco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Dipinta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Italiota"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ceramica_Pareti_Sottili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dolia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Est"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Intonaci"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lamboglia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Laterizi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lucerne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nord"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nord-Est"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nord-Ovest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ovest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Presigillata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SigillataAfricana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SigillataItalica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Strada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sud-Est"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sud-Ovest"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:ID"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Coppetta"/>
+        <Class IRI="#Patera"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Settore"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Sud-Est"/>
+            <NamedIndividual IRI="#Ovest"/>
+            <NamedIndividual IRI="#Nord-Ovest"/>
+            <NamedIndividual IRI="#Sud"/>
+            <NamedIndividual IRI="#Sud-Ovest"/>
+            <NamedIndividual IRI="#Nord"/>
+            <NamedIndividual IRI="#Nord-Est"/>
+            <NamedIndividual IRI="#Est"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Type1A"/>
+        <Class IRI="#Type8"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.dmi.unict.it/ontologies/Locations.owl#Localizzazione"/>
+        <Class IRI="http://purl.org/NET/cidoc-crm/core#E53_Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#A_Stampo"/>
+        <Class IRI="#Ceramica_Fine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anfora"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anfore_Trasporto"/>
+        <Class IRI="#Ceramica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anforetta"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ariballos"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attica"/>
+        <Class IRI="#Ceramica_Decorazione_Figurata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bacino"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Becco"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bicchiere"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottiglia"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brocca"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Campana"/>
+        <Class IRI="#A_Stampo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Catino"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ceramica"/>
+        <Class IRI="#Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ceramica_Comune"/>
+        <Class IRI="#Ceramica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ceramica_Da_Fuoco"/>
+        <Class IRI="#Ceramica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ceramica_Decorazione_Figurata"/>
+        <Class IRI="#Ceramica_Fine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ceramica_Fine"/>
+        <Class IRI="#Ceramica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ciotola"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Classe"/>
+        <Class IRI="http://purl.org/NET/cidoc-crm/core#E25_Man-Made_Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coperchio"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coppa"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coppetta"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coppo"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cratere"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disco"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dolia"/>
+        <Class IRI="#Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dolium"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiasco"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fondo"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Forma"/>
+        <Class IRI="http://purl.org/NET/cidoc-crm/core#E25_Man-Made_Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrammentoDiagnostico"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hayes"/>
+        <Class IRI="#Forma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Idria"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Italiota"/>
+        <Class IRI="#Ceramica_Decorazione_Figurata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kantharos"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kylix"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lamboglia"/>
+        <Class IRI="#Forma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laterizi"/>
+        <Class IRI="#Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lekanides"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lopadion"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lucerna"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lucerne"/>
+        <Class IRI="#Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mattone"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mortaio"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oggetto"/>
+        <Class IRI="http://purl.org/NET/cidoc-crm/core#E22_Man-Made_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oinochoe"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Olla"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orlo"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parete"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patera"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Piede"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pithos"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rithon"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Saggio"/>
+        <Class IRI="http://purl.org/dc/terms/Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scodella"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serbatoio"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Settore"/>
+        <Class IRI="http://purl.org/dc/terms/Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sigillata_Africana"/>
+        <Class IRI="#A_Stampo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sigillata_Italica"/>
+        <Class IRI="#A_Stampo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sigillata_Orientale"/>
+        <Class IRI="#A_Stampo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skyphos"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Specchio"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statuetta"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strada"/>
+        <Class IRI="#Saggio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tazza"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tegola"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TipoDiFrammento"/>
+        <Class IRI="http://purl.org/NET/cidoc-crm/core#E22_Man-Made_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type1"/>
+        <Class IRI="#Lamboglia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type1A"/>
+        <Class IRI="#Type1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type8"/>
+        <Class IRI="#Hayes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unguentario"/>
+        <Class IRI="#Oggetto"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Anfora"/>
+        <Class IRI="#Anforetta"/>
+        <Class IRI="#Ariballos"/>
+        <Class IRI="#Bacino"/>
+        <Class IRI="#Bicchiere"/>
+        <Class IRI="#Bottiglia"/>
+        <Class IRI="#Brocca"/>
+        <Class IRI="#Catino"/>
+        <Class IRI="#Ciotola"/>
+        <Class IRI="#Coperchio"/>
+        <Class IRI="#Coppa"/>
+        <Class IRI="#Coppetta"/>
+        <Class IRI="#Coppo"/>
+        <Class IRI="#Cratere"/>
+        <Class IRI="#Dolium"/>
+        <Class IRI="#Fiasco"/>
+        <Class IRI="#Idria"/>
+        <Class IRI="#Kantharos"/>
+        <Class IRI="#Kylix"/>
+        <Class IRI="#Lekanides"/>
+        <Class IRI="#Lopadion"/>
+        <Class IRI="#Lucerna"/>
+        <Class IRI="#Mattone"/>
+        <Class IRI="#Mortaio"/>
+        <Class IRI="#Oinochoe"/>
+        <Class IRI="#Olla"/>
+        <Class IRI="#Pithos"/>
+        <Class IRI="#Rithon"/>
+        <Class IRI="#Scodella"/>
+        <Class IRI="#Skyphos"/>
+        <Class IRI="#Statuetta"/>
+        <Class IRI="#Tazza"/>
+        <Class IRI="#Tegola"/>
+        <Class IRI="#Unguentario"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Becco"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Fondo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Orlo"/>
+        <Class IRI="#Parete"/>
+        <Class IRI="#Piede"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Parete"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Serbatoio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ansa"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Becco"/>
+        <Class IRI="#Fondo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Becco"/>
+        <Class IRI="#Orlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Becco"/>
+        <Class IRI="#Parete"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Becco"/>
+        <Class IRI="#Serbatoio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Becco"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bicchiere"/>
+        <Class IRI="#Coppa"/>
+        <Class IRI="#Scodella"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Classe"/>
+        <Class IRI="#Forma"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Classe"/>
+        <Class IRI="#Oggetto"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Classe"/>
+        <Class IRI="#Saggio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Classe"/>
+        <Class IRI="#Settore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Classe"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fondo"/>
+        <Class IRI="#Orlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fondo"/>
+        <Class IRI="#Parete"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fondo"/>
+        <Class IRI="#Serbatoio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fondo"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Forma"/>
+        <Class IRI="#Oggetto"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Forma"/>
+        <Class IRI="#Saggio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Forma"/>
+        <Class IRI="#Settore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Forma"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Oggetto"/>
+        <Class IRI="#Saggio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Oggetto"/>
+        <Class IRI="#Settore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Orlo"/>
+        <Class IRI="#Parete"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Orlo"/>
+        <Class IRI="#Serbatoio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Orlo"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parete"/>
+        <Class IRI="#Serbatoio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parete"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Piede"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Saggio"/>
+        <Class IRI="#Settore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Saggio"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Settore"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Ceramica_Comune"/>
+        <NamedIndividual IRI="#Ceramica_Comune"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ceramica_Da_Fuoco"/>
+        <NamedIndividual IRI="#Ceramica_Da_Fuoco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dolia"/>
+        <NamedIndividual IRI="#Dolia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Est"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lamboglia"/>
+        <NamedIndividual IRI="#Lamboglia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Laterizi"/>
+        <NamedIndividual IRI="#Laterizi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lucerne"/>
+        <NamedIndividual IRI="#Lucerne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Nord"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Nord-Est"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Nord-Ovest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Ovest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strada"/>
+        <NamedIndividual IRI="#Strada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Sud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Sud-Est"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Settore"/>
+        <NamedIndividual IRI="#Sud-Ovest"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Est"/>
+        <NamedIndividual IRI="#Nord"/>
+        <NamedIndividual IRI="#Nord-Est"/>
+        <NamedIndividual IRI="#Nord-Ovest"/>
+        <NamedIndividual IRI="#Ovest"/>
+        <NamedIndividual IRI="#Sud"/>
+        <NamedIndividual IRI="#Sud-Est"/>
+        <NamedIndividual IRI="#Sud-Ovest"/>
+    </DifferentIndividuals>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.dmi.unict.it/ontologies/Locations.owl#haLocalizzazione"/>
+        <ObjectProperty IRI="http://purl.org/NET/cidoc-crm/core#P54_has_current_permanent_location"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eComponibileCon"/>
+        <ObjectProperty IRI="http://purl.org/NET/cidoc-crm/core#P46_is_composed_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+        <ObjectProperty IRI="http://purl.org/NET/cidoc-crm/core#P46_is_composed_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoDisco"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoFondo"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoDisco"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoFondo"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haSaggio"/>
+        <ObjectProperty IRI="http://purl.org/NET/cidoc-crm/core#P54_has_current_permanent_location"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#haSettore"/>
+        <ObjectProperty IRI="http://purl.org/NET/cidoc-crm/core#P54_has_current_permanent_location"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+        <ObjectProperty IRI="#haFrammento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#haSaggio"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#haSettore"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammento"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#eComponibileCon"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haClasse"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haForma"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammento"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haSaggio"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#haSettore"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#eComponibileCon"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoAnsa"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoBecco"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoOrlo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoParete"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoPiede"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSerbatoio"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#eFrammentoSpecchio"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haClasse"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haForma"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammento"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haSaggio"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#haSettore"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eComponibileCon"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haClasse"/>
+        <Class IRI="#Oggetto"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haForma"/>
+        <Class IRI="#Oggetto"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haFrammento"/>
+        <Class IRI="#Oggetto"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+        <Class IRI="#Lucerna"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+        <Class IRI="#Lucerna"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+        <Class IRI="#Lucerna"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eComponibileCon"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eFrammentoDI"/>
+        <Class IRI="#Oggetto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haClasse"/>
+        <Class IRI="#Classe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haForma"/>
+        <Class IRI="#Forma"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammento"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoAnsa"/>
+        <Class IRI="#Ansa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoBecco"/>
+        <Class IRI="#Becco"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoOrlo"/>
+        <Class IRI="#Orlo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoParete"/>
+        <Class IRI="#Parete"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoPiede"/>
+        <Class IRI="#Piede"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoSerbatoio"/>
+        <Class IRI="#Serbatoio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haFrammentoSpecchio"/>
+        <Class IRI="#Specchio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haSaggio"/>
+        <Class IRI="#Saggio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haSettore"/>
+        <Class IRI="#Settore"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haAltezza"/>
+        <DataProperty IRI="#haMisura"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haDiametro"/>
+        <DataProperty IRI="#haMisura"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haLarghezza"/>
+        <DataProperty IRI="#haMisura"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haLunghezza"/>
+        <DataProperty IRI="#haMisura"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haMisura"/>
+        <DataProperty IRI="http://purl.org/NET/cidoc-crm/core#P90_has_value"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haPrimoDescrittoreForma"/>
+        <DataProperty IRI="#haDescrittoreForma"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haSecondoDescrittoreForma"/>
+        <DataProperty IRI="#haDescrittoreForma"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haSpessore"/>
+        <DataProperty IRI="#haMisura"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haSpessoreFondo"/>
+        <DataProperty IRI="#haSpessore"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haSpessoreParete"/>
+        <DataProperty IRI="#haSpessore"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#haTerzoDescrittoreForma"/>
+        <DataProperty IRI="#haDescrittoreForma"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasChroma"/>
+        <DataProperty IRI="#haColore"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasHue"/>
+        <DataProperty IRI="#haColore"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#haColore"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#haCassetta"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#haScheda"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasChroma"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasHue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dataScavo"/>
+        <ObjectUnionOf>
+            <Class IRI="#Oggetto"/>
+            <Class IRI="#TipoDiFrammento"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haCassetta"/>
+        <Class IRI="#Oggetto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haDescrittoreForma"/>
+        <Class IRI="#Forma"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haScheda"/>
+        <Class IRI="#Oggetto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haSpessore"/>
+        <Class IRI="#TipoDiFrammento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haSpessoreFondo"/>
+        <Class IRI="#Piede"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haSpessoreParete"/>
+        <ObjectUnionOf>
+            <Class IRI="#Parete"/>
+            <Class IRI="#Piede"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#dataScavo"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haAltezza"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haCassetta"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haColore"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haDescrittoreForma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haDescrizioneGenerale"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haDiametro"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haLarghezza"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haLunghezza"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haMisura"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haNome"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haPrimoDescrittoreForma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haScheda"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haSecondoDescrittoreForma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haSpessore"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haSpessoreFondo"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haSpessoreParete"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haTerzoDescrittoreForma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasChroma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroCivico"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:int"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <HasKey>
+        <Class IRI="#Forma"/>
+        <DataProperty IRI="#haPrimoDescrittoreForma"/>
+        <DataProperty IRI="#haSecondoDescrittoreForma"/>
+        <DataProperty IRI="#haTerzoDescrittoreForma"/>
+    </HasKey>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anfora</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Amphora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anfora</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anfora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anfore_Trasporto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anfora_Trasporto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anfore_Trasporto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transport_Amphora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anforetta</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anforetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anforetta</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LittleAmphora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ansa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ansa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ansa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Loop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ariballos</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ariballos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ariballos</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ariballos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bacino</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Bacino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bacino</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Basin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Becco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Becco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Becco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bicchiere</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Bicchiere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bicchiere</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Glass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bottiglia</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Bottiglia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bottiglia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bottle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Brocca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Brocca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Brocca</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pitcher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Catino</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Catino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Catino</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Washbasin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ceramic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Comune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica_Comune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Comune</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Coarse_Ware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Da_Fuoco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica_Da_Fuoco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Da_Fuoco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fire_Ceramic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Decorazione_Figurata</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica_Decorazione_Figurata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Decorazione_Figurata</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Figurative_Decoration_Ceramic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Fine</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica_FIne</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Fine</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fine_Ceramic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Pareti_Sottili</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ceramica_Pareti_Sottili</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ceramica_Pareti_Sottili</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Thin_Walls_Ceramic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ciotola</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ciotola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ciotola</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Saucer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Classe</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Classe</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Classe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coperchio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coperchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Coperchio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Coppa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Goblet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppetta</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Coppetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppetta</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LittleCup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Coppo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coppo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Coppo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cratere</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Crater</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cratere</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Cratere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Disco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Disco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Disco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Disk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dolia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dolia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dolia</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dolia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dolium</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dolium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dolium</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dolium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Est</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">East</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Est</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Est</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fiasco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Debacle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fiasco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Fiasco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fondo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bottom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fondo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Fondo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Forma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Forma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Forma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Shape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FrammentoDiagnostico</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DiagnosticFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FrammentoDiagnostico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">FrammentoDiagnostico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Idria</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Idria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Idria</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Idria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kantharos</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Kantharos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kantharos</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kantharos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kylix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Kylix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kylix</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kylix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lamboglia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lamboglia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lamboglia</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Lamboglia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Laterizi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bricks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Laterizi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Laterizi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lekanides</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lekanides</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lekanides</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Lekanides</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lopadion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lopadion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lopadion</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Lopadion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lucerna</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lucerna</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Lucerna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lucerne</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lucerne</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Lucerne</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mattone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Brick</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mattone</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Mattone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mortaio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Mortaio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mortaio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mortar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">North</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord-Est</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nord-Est</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord-Est</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">North-East</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord-Ovest</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nord-Ovest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nord-Ovest</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">North-West</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oggetto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oggetto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oggetto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oinochoe</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Oinochoe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oinochoe</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oinochoe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Olla</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Olla</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Olla</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Olla</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Orlo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Edge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Orlo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Orlo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ovest</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ovest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ovest</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">West</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Parete</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Parete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Parete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Wall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Patera</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Patera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Patera</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Peg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Piede</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Foot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Piede</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Piede</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pithos</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pithos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pithos</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Pithos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rithon</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rithon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rithon</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rithon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Saggio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Saggio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Saggio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scodella</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bowl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scodella</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Scodella</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Serbatoio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Serbatoio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Neck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Settore</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Settore</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Settore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SigillataAfricana</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">African_Sealed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SigillataAfricana</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sigillata_Africana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SigillataItalica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Italic_Sealed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SigillataItalica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sigillata_Italica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Africana</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">African_Red_Slip_Ware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Africana</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sigilllata_Africana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Italica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Italic_Red_Slip_Ware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Italica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sigillata_Italica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Orientale</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Eastern_Red_Slip_Ware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sigillata_Orientale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sigillata_Orientale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Skyphos</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Skyphos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Skyphos</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Skyphos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Specchio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Shoulder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Specchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spalla</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Statuetta</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Statuetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Statuetta</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Statuette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Strada</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Strada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Strada</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">South</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud-Est</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">South-East</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud-Est</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sud-Est</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud-Ovest</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">South-West</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sud-Ovest</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sud-Ovest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tazza</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tazza</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tazza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tegola</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tegola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tegola</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Tile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TipoDiFrammento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tipo_Di_Frammento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TipoDiFrammento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type_Of_Fragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unguentario</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Unguentario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataScavo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haDataScavo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataScavo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSiteDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eComponibileCon</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eComponibileCon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eComponibileCon</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isFittedWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoAnsa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoAnsa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoAnsa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isAnsaFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoBecco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoBecco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoBecco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isRimFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoDI</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoDi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoDI</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isFragmentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoDisco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoDisco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoDisco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDiskFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoFondo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoFondo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoFondo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isBottomFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoOrlo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoOrlo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoOrlo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isEdgeFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoParete</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoParete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoParete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isWallFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoPiede</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoPiede</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoPiede</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isFootFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoSerbatoio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoSerbatoio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoSerbatoio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isNeckFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoSpecchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">eFrammentoSpecchio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eFrammentoSpecchio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isShoulderFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haAltezza</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haAltezza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haAltezza</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasHeight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haCassetta</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haCassetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haCassetta</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasBox</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haClasse</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haClasse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haClasse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haColore</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haColore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haColore</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasColor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDescrittoreForma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haDescrittoreForma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDescrittoreForma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasShapeDescriptor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDescrizioneGenerale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haDescrizioneGenerale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDescrizioneGenerale</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasGeneralDesciption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDiametro</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haDiametro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haDiametro</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasDiameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haForma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haForma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haForma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasShape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoAnsa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">haFrammentoAnsa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoAnsa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAnsaFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoBecco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoBecco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoBecco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasRimFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoDisco</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoDisco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoDisco</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasDiskFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoFondo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoFondo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoFondo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasBottomFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoOrlo</IRI>
+        <Literal xml:lang="enit" datatypeIRI="&rdf;PlainLiteral">haFrammentoOrlo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoOrlo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasEdgeFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoParete</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoParete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoParete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasWallFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoPiede</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoPiede</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoPiede</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasFootFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoSerbatoio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoCollo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoSerbatoio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasNeckFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoSpecchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haFrammentoSpecchio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haFrammentoSpecchio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasShoulderFragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haLarghezza</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haLarghezza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haLarghezza</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasWidth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haLunghezza</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haLunghezza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haLunghezza</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasLength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haMisura</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haMisura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haMisura</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haNome</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haNome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haNome</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haPrimoDescrittoreForma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haPrimoDescrittoreForma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haPrimoDescrittoreForma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasFirstShapeDescriptor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSaggio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSaggio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSaggio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haScheda</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haScheda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haScheda</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSecondoDescrittoreForma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSecondoDescrittoreForma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSecondoDescrittoreForma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSecondShapeDescriptor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSettore</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSettore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSettore</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessore</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSpessore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessore</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasThickness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessoreFondo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSpessoreFondo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessoreFondo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasBottomThickness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessoreParete</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haSpessoreParete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haSpessoreParete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasWallThickness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haTerzoDescrittoreForma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasThirdShapeDescriptor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#haTerzoDescrittoreForma</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">haterzoDescrittoreForma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChroma</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasChroma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasHue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroCivico</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">houseNumber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroCivico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">numeroCivico</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
